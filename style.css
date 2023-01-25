@@ -1,0 +1,24 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color:  black;
+	color: white;
+}
+
+header h1{
+	text-align: center;
+	font-size: 40px;
+}
+
+<div class="dé">
+<form action="de.php" method="post">
+  <input type="submit" name="roll" value="Lancer le dé">
+
+  <?php if (isset($_SESSION['dice_roll'])): ?>
+  <div class="message">
+    <span class="content">Résultat du lancer de dé : <?php echo $_SESSION['dice_roll']; ?></span>
+  </div>
+<?php endif; ?>
